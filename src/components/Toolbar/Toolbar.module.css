@@ -1,0 +1,122 @@
+.toolbar {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-panel);
+  gap: 4px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.logo {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: -0.3px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo svg {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: var(--border-panel);
+  margin: 0 4px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.btn {
+  height: 30px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: var(--radius-md);
+  font-size: 12px;
+  color: var(--text-secondary);
+  transition: background 0.1s, color 0.1s;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.exportBtn {
+  background: var(--accent);
+  color: white;
+  padding: 0 10px;
+  font-weight: 500;
+}
+
+.exportBtn:hover {
+  background: #1d4ed8;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-panel);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-panel);
+  min-width: 160px;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background: var(--bg-hover);
+}
+
+.dropdownDivider {
+  height: 1px;
+  background: var(--border-panel);
+  margin: 2px 0;
+}
+
+.shortcut {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-left: auto;
+  font-family: var(--font-ui);
+}

@@ -1,0 +1,84 @@
+/* ─── Design tokens ─────────────────────────────────────────── */
+:root {
+  --bg-canvas: #f8f9fa;
+  --bg-surface: #ffffff;
+  --bg-hover: #eef2ff;
+  --border-default: #9ca3af;
+  --border-selected: #2563eb;
+  --text-primary: #111827;
+  --text-secondary: #6b7280;
+  --text-placeholder: #d1d5db;
+  --accent: #2563eb;
+  --accent-light: #eff6ff;
+  --warning: #d97706;
+  --warning-light: #fef3c7;
+  --error: #dc2626;
+  --success: #16a34a;
+  --surface-panel: #f9fafb;
+  --border-panel: #e5e7eb;
+
+  --font-ui: 'Inter', system-ui, sans-serif;
+  --font-shape: 'STIX Two Text', Georgia, serif;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+
+  --shadow-panel: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+/* ─── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--font-ui);
+  color: var(--text-primary);
+  background: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+input {
+  font-family: inherit;
+}
+
+/* ─── Scrollbar (panels) ─────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-panel);
+  border-radius: 3px;
+}
+
+/* ─── Utility ─────────────────────────────────────────────────── */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

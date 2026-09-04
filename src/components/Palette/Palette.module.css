@@ -1,0 +1,72 @@
+.palette {
+  width: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  background: var(--bg-surface);
+  border-right: 1px solid var(--border-panel);
+  gap: 2px;
+  flex-shrink: 0;
+}
+
+.divider {
+  width: 32px;
+  height: 1px;
+  background: var(--border-panel);
+  margin: 4px 0;
+}
+
+.toolBtn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  transition: background 0.1s, color 0.1s;
+  position: relative;
+}
+
+.toolBtn:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+.toolBtn.active {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+.toolBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  left: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--text-primary);
+  color: white;
+  font-size: 11px;
+  padding: 3px 6px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.1s;
+  z-index: 100;
+}
+
+.toolBtn:hover .tooltip {
+  opacity: 1;
+}
+
+.kbd {
+  font-size: 9px;
+  opacity: 0.6;
+  margin-left: 4px;
+}
